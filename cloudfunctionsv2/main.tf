@@ -59,7 +59,8 @@ data "archive_file" "this" {
   count       = length(var.names)
   type        = "zip"
   output_path = "/tmp/${var.names[count.index]}.zip"
-  source_dir  = "${path.module}/../src/${var.srccde}"
+ # source_dir  = "${path.module}/../src/${var.srccde}"
+  source_dir = "/home/runner/work/cca-config/cca-config/src/${var.srccde}"
   excludes    = var.excludes
 }
 
